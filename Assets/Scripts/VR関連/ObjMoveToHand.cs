@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class ObjMoveToHand : MonoBehaviour {
     public GameObject hand;             //つかむ手のオブジェクト
-    public Vector3 handoffset;          //ものをつかむ位置のずれ
 	// Use this for initialization
 	void Start () {
 		
