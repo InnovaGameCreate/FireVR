@@ -10,10 +10,11 @@
         private VRTK_ControllerEvents controllerEvents;
         public int section;
         private Transform localtra;
-        Animation anim ;
+        Animator anim ;
 
         public override void StartUsing(VRTK_InteractUse usingObject)
-        {          
+        {
+      
             controllerEvents = usingObject.GetComponent<VRTK_ControllerEvents>();
           
         }
@@ -21,13 +22,25 @@
         public override void StopUsing(VRTK_InteractUse usingObject)
         {
             controllerEvents = null;
-            Destroy(GetComponent<Rigidbody>());
+            Destroy(this.GetComponent<Rigidbody>());
         }
         protected override void Awake()
         {
             base.Awake();
-            anim = gameObject.GetComponent<Animation>();
+            anim = gameObject.GetComponent<Animator>();
         }
+
+        protected override void OnDisable()
+        {
+            base.OnDisable();
+            Destroy(this.GetComponent<Rigidbody>());
+            if (section == 2)
+            {
+                transform.localPosition = GetComponent<StopPosition>().localtra;
+                transform.localRotation = GetComponent<StopPosition>().localrad;
+            }
+        }
+
         protected override void Update()
         {
         
@@ -39,11 +52,11 @@
                 Destroy(this.GetComponent<ConfigurableJoint>());
                 Destroy(this.GetComponent<VRTK_SpringJointGrabAttach>());
                 Destroy(this.GetComponent<SpringJoint>());
-                section = 1;
-              
-                anim.Play();          
+                anim.SetTrigger("Hose");
+                section = 1;                
             }
-   
+            if (section == 2)
+                GetComponent<Animator>().enabled = false;
          
 
             GetComponent<OpeHose>().isGrabbable = true;
