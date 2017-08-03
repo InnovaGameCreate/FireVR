@@ -6,6 +6,8 @@ TagManager:
   tags:
   - target
   - TeleportIgnore
+  - Fire
+  - Smoke
   layers:
   - Default
   - TransparentFX
@@ -17,7 +19,7 @@ TagManager:
   - 
   - "\u6D88\u706B\u5668\u672C\u4F53"
   - "\u6D88\u706B\u5668\u30DB\u30FC\u30B9"
-  - 
+  - Stage
   - 
   - 
   - 
