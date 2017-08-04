@@ -22,7 +22,7 @@ GameObject:
   - component: {fileID: 65282273136641206}
   - component: {fileID: 114090684914287806}
   - component: {fileID: 54736743063797110}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: "\u7740\u706B\u5019\u88DC1"
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -40,7 +40,7 @@ GameObject:
   - component: {fileID: 65173169414573816}
   - component: {fileID: 114316124657881942}
   - component: {fileID: 54014909927905432}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: "\u7740\u706B\u5019\u88DC5"
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -58,7 +58,7 @@ GameObject:
   - component: {fileID: 65066957293107238}
   - component: {fileID: 114027322691689754}
   - component: {fileID: 54597497140734270}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: "\u7740\u706B\u5019\u88DC3"
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -75,7 +75,7 @@ GameObject:
   - component: {fileID: 4060442013432886}
   - component: {fileID: 198871086644608242}
   - component: {fileID: 199141984288168632}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: Glow
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -90,7 +90,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4557067000157098}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: "\u708E"
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -107,7 +107,7 @@ GameObject:
   - component: {fileID: 4568504830287330}
   - component: {fileID: 198571056443157516}
   - component: {fileID: 199768860662157434}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: Smoke
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -125,7 +125,7 @@ GameObject:
   - component: {fileID: 65162573934125002}
   - component: {fileID: 114857071485518902}
   - component: {fileID: 54432459690584028}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: "\u7740\u706B\u5019\u88DC2"
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -143,7 +143,7 @@ GameObject:
   - component: {fileID: 65411380992618136}
   - component: {fileID: 114336547613003306}
   - component: {fileID: 54410382206004176}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: "\u7740\u706B\u5019\u88DC4"
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -167,7 +167,7 @@ GameObject:
   - component: {fileID: 65519510063561038}
   - component: {fileID: 65309699086954600}
   - component: {fileID: 114203565252692028}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: FireMobile
   m_TagString: Fire
   m_Icon: {fileID: 0}
@@ -494,7 +494,7 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 0.4, y: 0.7, z: 0.4}
+  m_Size: {x: 0.1, y: 0.4, z: 0.1}
   m_Center: {x: 0, y: 0.1, z: 0}
 --- !u!114 &114027322691689754
 MonoBehaviour:
@@ -3980,7 +3980,7 @@ ParticleSystem:
         m_RotationOrder: 4
     startSizeY:
       serializedVersion: 2
-      minMaxState: 0
+      minMaxState: 3
       scalar: 1
       minScalar: 1
       maxCurve:
@@ -4021,7 +4021,7 @@ ParticleSystem:
         m_RotationOrder: 4
     startSizeZ:
       serializedVersion: 2
-      minMaxState: 0
+      minMaxState: 3
       scalar: 1
       minScalar: 1
       maxCurve:
@@ -4062,7 +4062,7 @@ ParticleSystem:
         m_RotationOrder: 4
     startRotationX:
       serializedVersion: 2
-      minMaxState: 0
+      minMaxState: 3
       scalar: 0
       minScalar: 0
       maxCurve:
@@ -4103,7 +4103,7 @@ ParticleSystem:
         m_RotationOrder: 4
     startRotationY:
       serializedVersion: 2
-      minMaxState: 0
+      minMaxState: 3
       scalar: 0
       minScalar: 0
       maxCurve:
@@ -6995,7 +6995,7 @@ ParticleSystem:
   moveWithTransform: 1
   moveWithCustomTransform: {fileID: 0}
   scalingMode: 2
-  randomSeed: 1049264837
+  randomSeed: 684237502
   InitialModule:
     serializedVersion: 3
     enabled: 1
@@ -9211,7 +9211,7 @@ ParticleSystem:
         m_NumAlphaKeys: 2
     range: {x: 0, y: 1}
   CollisionModule:
-    enabled: 1
+    enabled: 0
     serializedVersion: 3
     type: 0
     collisionMode: 0
