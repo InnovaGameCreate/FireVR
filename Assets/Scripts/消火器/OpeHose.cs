@@ -11,18 +11,21 @@
         public int section;
         private Transform localtra;
         Animator anim ;
+        public GameObject prehose;
 
         public override void StartUsing(VRTK_InteractUse usingObject)
         {
-      
+            base.StartUsing(usingObject);
+        
             controllerEvents = usingObject.GetComponent<VRTK_ControllerEvents>();
-          
+
         }
         //使用終了　トリガーを引いた
         public override void StopUsing(VRTK_InteractUse usingObject)
         {
             controllerEvents = null;
             Destroy(this.GetComponent<Rigidbody>());
+            base.StopUsing(usingObject);
         }
         protected override void Awake()
         {
@@ -46,8 +49,9 @@
         
             base.Update();
            
-            if (transform.localPosition.y > -2 &&section ==0 )
-            { 
+            if (transform.localPosition.y > -0.1f &&section ==0 )
+            {
+                prehose.SetActive(false);
                 Destroy(this.GetComponent<VRTK_SwapControllerGrabAction>());
                 Destroy(this.GetComponent<ConfigurableJoint>());
                 Destroy(this.GetComponent<VRTK_SpringJointGrabAttach>());
