@@ -9,6 +9,7 @@ TagManager:
   - Fire
   - Smoke
   - Wood
+  - RemoveFire
   layers:
   - Default
   - TransparentFX
