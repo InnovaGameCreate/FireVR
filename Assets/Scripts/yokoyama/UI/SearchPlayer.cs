@@ -19,15 +19,17 @@ public class SearchPlayer : MonoBehaviour {
 
     private void OnTriggerStay(Collider coll)
     {
-        if (coll.gameObject.name == "[VRTK][AUTOGEN][BodyColliderContainer]")
+        //Debug.Log(coll.gameObject.name);
+        if (coll.gameObject.name == "CustomHandCollider")
         {
             FoundPlayer = true;
+            //Debug.Log("nanndedesuka");
         }
     }
 
     private void OnTriggerExit(Collider coll)
     {
-        if (coll.gameObject.name == "[VRTK][AUTOGEN][BodyColliderContainer]")
+        if (coll.gameObject.name == "CustomHandCollider")
         {
             FoundPlayer = false;
             Debug.Log(coll.gameObject.name);
