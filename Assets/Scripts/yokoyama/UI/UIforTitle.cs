@@ -8,7 +8,7 @@ public class UIforTitle : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-        
+        //_camera = GameObject.Find("Camera (eye)");//カメラ探してきて代入 名前違いに注意
 
     }
 	
@@ -18,11 +18,11 @@ public class UIforTitle : MonoBehaviour {
     }
 
     
-    private void OnTriggerStay(Collider coll)
-    {
-        Debug.Log("hoge:" + coll.gameObject.name );
+    //private void OnTriggerStay(Collider coll)
+    //{
+    //    Debug.Log("hoge:" + coll.gameObject.name );
         
-    }
+    //}
 
     /*  [VRTK_Scripts] /LeftControllerとRightControllerのコンポーネント
      *  VRTK_Pointer内のEnable Teleportのチェックを外すとテレポ機能の削除ができる
