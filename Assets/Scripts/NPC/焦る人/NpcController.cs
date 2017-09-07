@@ -34,7 +34,7 @@ public class NpcController : MonoBehaviour
  
             }
         }
-        Debug.Log(agent.remainingDistance + "   " + agent.stoppingDistance);
+       
         if (exiting)
         {
             agent.SetDestination(exit.position);
