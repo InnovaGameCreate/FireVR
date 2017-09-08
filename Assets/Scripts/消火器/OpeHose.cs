@@ -48,9 +48,10 @@
         {
         
             base.Update();
-           
+            Debug.Log(transform.localPosition.y);
             if (transform.localPosition.y > -0.1f &&section ==0 )
             {
+            
                 prehose.SetActive(false);
                 Destroy(this.GetComponent<VRTK_SwapControllerGrabAction>());
                 Destroy(this.GetComponent<ConfigurableJoint>());
