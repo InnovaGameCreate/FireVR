@@ -10,10 +10,12 @@ public class NpcController : MonoBehaviour
     private bool exiting;
     NavMeshAgent agent;     //ナビメッシュ格納
     public Transform exit;
+    private Animator ani;
     // Use this for initialization
     void Start()
     {
         agent = GetComponent<NavMeshAgent>();
+        ani = GetComponent<Animator>();
     }
 
     // Update is called once per frame
@@ -24,13 +26,13 @@ public class NpcController : MonoBehaviour
             if (!confused)
             {
                 confused = true;
-                GetComponent<Animator>().SetLayerWeight(1, 1);
-                GetComponent<Animator>().SetTrigger("Confused");
+                ani.SetLayerWeight(1, 1);
+                ani.SetTrigger("Confused");
             }
             else
             {
                 exiting = true;
-                GetComponent<Animator>().SetLayerWeight(1, 0);
+                ani.SetLayerWeight(1, 0);
  
             }
         }
@@ -41,8 +43,8 @@ public class NpcController : MonoBehaviour
 
             if (Vector3.Distance(exit.position, transform.position) <= agent.stoppingDistance)
             {
-              
-                GetComponent<Animator>().SetTrigger("Idle");
+
+                ani.SetTrigger("Idle");
                 
                // GetComponent<Animator>().applyRootMotion = false;
                 exiting = false;
