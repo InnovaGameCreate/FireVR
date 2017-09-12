@@ -62,8 +62,9 @@ public class TakeRemoveFire : MonoBehaviour {
                 }
                     break;
             case Faze.PRETAKE:
-                if (agent.remainingDistance <= agent.stoppingDistance)
+                if (agent.remainingDistance <= agent.stoppingDistance&& agent.remainingDistance!=0)
                 {
+                 
                     state = Faze.TAKE;
                     get_nearobj().transform.parent = transform;
                     get_nearobj().transform.localPosition = new Vector3(0, 1.2f, 0.4f);
