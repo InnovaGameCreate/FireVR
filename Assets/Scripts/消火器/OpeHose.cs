@@ -13,6 +13,12 @@
         Animator anim ;
         public GameObject prehose;
 
+        protected override void Awake()
+        {
+            base.Awake();
+            anim = gameObject.GetComponent<Animator>();  
+        }
+    
         public override void StartUsing(VRTK_InteractUse usingObject)
         {
             base.StartUsing(usingObject);
@@ -26,11 +32,6 @@
             controllerEvents = null;
             Destroy(this.GetComponent<Rigidbody>());
             base.StopUsing(usingObject);
-        }
-        protected override void Awake()
-        {
-            base.Awake();
-            anim = gameObject.GetComponent<Animator>();
         }
 
         protected override void OnDisable()

@@ -3,8 +3,9 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class UIforTitle : MonoBehaviour {
-
+    public bool Yrot;
     public GameObject _camera;
+    private Vector3 mevec;
 
 	// Use this for initialization
 	void Start () {
@@ -14,19 +15,16 @@ public class UIforTitle : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-        this.transform.LookAt(_camera.transform);
+        //this.transform.LookAt(_camera.transform);
+        if(Yrot)
+            transform.rotation = Quaternion.Slerp(transform.rotation,Quaternion.LookRotation(transform.position - _camera.transform.position),1.0f);
+        else
+        {
+            transform.rotation = Quaternion.Slerp(transform.rotation, Quaternion.LookRotation(new Vector3( transform.position.x - _camera.transform.position.x , 0.0f , transform.position.z - _camera.transform.position.z)), 1.0f);
+        }
     }
 
     
-    //private void OnTriggerStay(Collider coll)
-    //{
-    //    Debug.Log("hoge:" + coll.gameObject.name );
-        
-    //}
-
-    /*  [VRTK_Scripts] /LeftControllerとRightControllerのコンポーネント
-     *  VRTK_Pointer内のEnable Teleportのチェックを外すとテレポ機能の削除ができる
-     *  
-     */
+    
 
 }

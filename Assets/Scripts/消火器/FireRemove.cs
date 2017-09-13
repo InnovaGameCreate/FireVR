@@ -14,6 +14,8 @@
         private int rightorleft;                //1なら右　２なら左コントローラ
         private OpeHose ope;
         private bool pulled;
+        private GameObject hose;         //hoseオブジェ
+        private bool pushtouch;     //タッチボタンを押したかどうか
 
         //使用開始　トリガーを押した
         public override void StartUsing(VRTK_InteractUse usingObject)
@@ -51,7 +53,9 @@
             if (rightorleft != 0)
                 // イベントハンドラの登録
                 (rightorleft == 1 ? sc_rightcontroller : sc_leftcontroller).GetComponent<VRTK_ControllerEvents>().TouchpadAxisChanged += PushButton;
- 
+            (rightorleft == 1 ? sc_rightcontroller : sc_leftcontroller).GetComponent<VRTK_ControllerEvents>().TouchpadPressed += PushTouchStart;
+            (rightorleft == 1 ? sc_rightcontroller : sc_leftcontroller).GetComponent<VRTK_ControllerEvents>().TouchpadTouchEnd += PushTouchEnd;
+            GetComponent<BoxCollider>().enabled = false;
         }
 
         public override void Ungrabbed(VRTK_InteractGrab currentGrabbingObject)
@@ -59,11 +63,18 @@
             if (rightorleft != 0)
                 // イベントハンドラの登録
                 (rightorleft == 1 ? sc_rightcontroller : sc_leftcontroller).GetComponent<VRTK_ControllerEvents>().TouchpadAxisChanged -= PushButton;
+            (rightorleft == 1 ? sc_rightcontroller : sc_leftcontroller).GetComponent<VRTK_ControllerEvents>().TouchpadPressed -= PushTouchStart;
+            (rightorleft == 1 ? sc_rightcontroller : sc_leftcontroller).GetComponent<VRTK_ControllerEvents>().TouchpadTouchEnd -= PushTouchEnd;
+            GetComponent<BoxCollider>().enabled = true;
+            GetComponent<ModifyPos>().set_firstpos();
         }
         protected override void Awake()
         {
-            ope = transform.Find("Hose").GetComponent<OpeHose>();
+            base.Awake();
+            hose = transform.Find("Hose").gameObject;
+            ope = hose.GetComponent<OpeHose>();
         }
+
         // 煙発生コルーチン  
         IEnumerator Sample()
         {
@@ -86,6 +97,24 @@
             pulled = true;
         }
 
+        // イベントハンドラ
+        private void PushTouchStart(object sender, ControllerInteractionEventArgs e)
+        {
+            hose.SetActive(false);
+            pushtouch = true;
+        }
 
+        // イベントハンドラ
+        private void PushTouchEnd(object sender, ControllerInteractionEventArgs e)
+        {
+            if (pushtouch)
+            {
+                hose.SetActive(true);
+                hose.transform.localPosition = new Vector3(0.11f, -1.25f, 0.93f);
+                hose.transform.localRotation = Quaternion.Euler(new Vector3(0,0,0));
+                hose.GetComponent<ConfigurableJoint>().connectedAnchor = new Vector3(0.1100016f, -1.25f, 1.18f);
+                pushtouch = false;
+            }
+        }
     }
 }
