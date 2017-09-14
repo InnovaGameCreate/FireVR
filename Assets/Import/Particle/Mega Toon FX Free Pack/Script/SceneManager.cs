@@ -2,6 +2,8 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine.UI;
+using System;
+using UnityEngine.SceneManagement;
 
 public class SceneManager : MonoBehaviour {
 	public GameObject Parent;
@@ -13,7 +15,9 @@ public class SceneManager : MonoBehaviour {
 	public int currentPSGO = 0;
 
 	public GameObject PrePSGO, NexPSGO;
-	void Start () {
+    internal static Action<Scene, LoadSceneMode> sceneLoaded;
+
+    void Start () {
 		for (int i =0; i< Parent.transform.childCount; i++)
 			childname.Add (Parent.transform.GetChild (i).name);
 		NexPSGO = Parent.transform.GetChild (0).gameObject;
