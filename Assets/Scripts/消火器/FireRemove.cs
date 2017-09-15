@@ -22,6 +22,10 @@
         private float smokepercent=100;  //煙残量
         public UnityEngine.UI.Text guipervent;  //ui
      
+        public float get_smokepercent()
+        {
+            return smokepercent;
+        }
         //使用開始　トリガーを押した
         public override void StartUsing(VRTK_InteractUse usingObject)
         {
