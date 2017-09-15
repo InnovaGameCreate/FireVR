@@ -63,8 +63,11 @@
             if (rightorleft != 0)
                 // イベントハンドラの登録
                 (rightorleft == 1 ? sc_rightcontroller : sc_leftcontroller).GetComponent<VRTK_ControllerEvents>().TouchpadAxisChanged += PushButton;
-            (rightorleft == 1 ? sc_rightcontroller : sc_leftcontroller).GetComponent<VRTK_ControllerEvents>().TouchpadTouchStart += PushTouchStart;
-            (rightorleft == 1 ? sc_rightcontroller : sc_leftcontroller).GetComponent<VRTK_ControllerEvents>().TouchpadTouchEnd += PushTouchEnd;
+            sc_rightcontroller.GetComponent<VRTK_ControllerEvents>().TouchpadTouchStart += PushTouchStart;
+            sc_rightcontroller.GetComponent<VRTK_ControllerEvents>().TouchpadTouchEnd += PushTouchEnd;
+            sc_leftcontroller.GetComponent<VRTK_ControllerEvents>().TouchpadTouchStart += PushTouchStart;
+            sc_leftcontroller.GetComponent<VRTK_ControllerEvents>().TouchpadTouchEnd += PushTouchEnd;
+
             GetComponent<BoxCollider>().enabled = false;
             GetComponent<ModifyPos>().set_firstpos();
             gui.SetActive(true);
@@ -75,8 +78,10 @@
             if (rightorleft != 0)
                 // イベントハンドラの登録
                 (rightorleft == 1 ? sc_rightcontroller : sc_leftcontroller).GetComponent<VRTK_ControllerEvents>().TouchpadAxisChanged -= PushButton;
-            (rightorleft == 1 ? sc_rightcontroller : sc_leftcontroller).GetComponent<VRTK_ControllerEvents>().TouchpadTouchStart -= PushTouchStart;
-            (rightorleft == 1 ? sc_rightcontroller : sc_leftcontroller).GetComponent<VRTK_ControllerEvents>().TouchpadTouchEnd -= PushTouchEnd;
+            sc_rightcontroller.GetComponent<VRTK_ControllerEvents>().TouchpadTouchStart -= PushTouchStart;
+            sc_rightcontroller.GetComponent<VRTK_ControllerEvents>().TouchpadTouchEnd -= PushTouchEnd;
+            sc_leftcontroller.GetComponent<VRTK_ControllerEvents>().TouchpadTouchStart -= PushTouchStart;
+            sc_leftcontroller.GetComponent<VRTK_ControllerEvents>().TouchpadTouchEnd -= PushTouchEnd;
             GetComponent<BoxCollider>().enabled = true;
             gui.SetActive(false);
             smoke.GetComponent<ParticleSystem>().Stop();
