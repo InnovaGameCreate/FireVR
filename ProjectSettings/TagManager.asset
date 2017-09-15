@@ -8,6 +8,8 @@ TagManager:
   - RemoveFire
   - Smoke
   - Wood
+  - ScoreNPC
+  - ScoreFire
   layers:
   - Default
   - TransparentFX

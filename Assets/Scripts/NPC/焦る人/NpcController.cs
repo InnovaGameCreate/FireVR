@@ -50,5 +50,7 @@ public class NpcController : MonoBehaviour
                 exiting = false;
             }
         }
+        if (Vector3.Distance(exit.position, transform.position) < 2)
+            Destroy(this.gameObject);
     }
 }

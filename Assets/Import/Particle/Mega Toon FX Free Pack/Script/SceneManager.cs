@@ -23,7 +23,13 @@ public class SceneManager : MonoBehaviour {
 		NexPSGO = Parent.transform.GetChild (0).gameObject;
 		PSPlay ();
 	}
-	void Update () 
+
+    internal static void LoadScene(string v)
+    {
+        throw new NotImplementedException();
+    }
+
+    void Update () 
 	{
 		int position = childname[currentPSGO].IndexOf("[");
 		if (position > 0)

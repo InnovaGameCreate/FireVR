@@ -24,7 +24,7 @@ GameObject:
   - component: {fileID: 195212093858374090}
   m_Layer: 0
   m_Name: "\u7126\u308B\u4EBA"
-  m_TagString: Untagged
+  m_TagString: ScoreNPC
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -693,7 +693,7 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1369954119045592}
-  m_LocalRotation: {x: 0.009040627, y: -0.015921012, z: 0.13444108, w: 0.9907524}
+  m_LocalRotation: {x: 0.009040628, y: -0.015921013, z: 0.1344411, w: 0.99075246}
   m_LocalPosition: {x: -0.43575376, y: 0.000000059604645, z: 0.00000008381899}
   m_LocalScale: {x: 1.0000001, y: 1.0000001, z: 1.0000001}
   m_Children:
@@ -1029,7 +1029,7 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1619722591131458}
-  m_LocalRotation: {x: -0.08326924, y: -0.035607643, z: -0.05480837, w: 0.99438137}
+  m_LocalRotation: {x: -0.083269246, y: -0.035607647, z: -0.054808374, w: 0.9943814}
   m_LocalPosition: {x: -0.34240493, y: 0.000000089406896, z: 0.00000005774193}
   m_LocalScale: {x: 1.0000001, y: 1.0000002, z: 1.0000001}
   m_Children:
@@ -1112,9 +1112,9 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1012648577710980}
-  m_LocalRotation: {x: -0, y: 0.06383106, z: -0, w: 0.99796075}
-  m_LocalPosition: {x: -61.183617, y: 39.783916, z: 96.742966}
-  m_LocalScale: {x: 0.9, y: 0.9, z: 0.9}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -61.19, y: 39.823856, z: 96.75}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4942635936136696}
   - {fileID: 4592264335997418}

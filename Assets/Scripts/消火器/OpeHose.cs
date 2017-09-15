@@ -49,7 +49,7 @@
         {
         
             base.Update();
-            Debug.Log(transform.localPosition.y);
+      
             if (transform.localPosition.y > -0.1f &&section ==0 )
             {
             

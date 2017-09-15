@@ -1592,7 +1592,7 @@ GameObject:
   - component: {fileID: 114956647469048060}
   m_Layer: 0
   m_Name: "\u7126\u308Bcau"
-  m_TagString: Untagged
+  m_TagString: ScoreNPC
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

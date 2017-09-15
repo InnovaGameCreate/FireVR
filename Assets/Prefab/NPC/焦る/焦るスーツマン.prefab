@@ -114,7 +114,7 @@ GameObject:
   - component: {fileID: 195699874033007708}
   m_Layer: 0
   m_Name: "\u7126\u308B\u30B9\u30FC\u30C4\u30DE\u30F3"
-  m_TagString: Untagged
+  m_TagString: ScoreNPC
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1665,7 +1665,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1036026496372922}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -71.08179, y: 39.776146, z: 95.5486}
+  m_LocalPosition: {x: -69.81, y: 39.776146, z: 91.41}
   m_LocalScale: {x: 0.9, y: 0.9, z: 0.9}
   m_Children:
   - {fileID: 4048982479115346}

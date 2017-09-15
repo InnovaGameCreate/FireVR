@@ -59,9 +59,9 @@
             if (rightorleft != 0)
                 // イベントハンドラの登録
                 (rightorleft == 1 ? sc_rightcontroller : sc_leftcontroller).GetComponent<VRTK_ControllerEvents>().TouchpadAxisChanged += PushButton;
-            sc_rightcontroller.GetComponent<VRTK_ControllerEvents>().TouchpadTouchStart += PushTouchStart;
+            sc_rightcontroller.GetComponent<VRTK_ControllerEvents>().TouchpadPressed += PushTouchStart;
             sc_rightcontroller.GetComponent<VRTK_ControllerEvents>().TouchpadTouchEnd += PushTouchEnd;
-            sc_leftcontroller.GetComponent<VRTK_ControllerEvents>().TouchpadTouchStart += PushTouchStart;
+            sc_leftcontroller.GetComponent<VRTK_ControllerEvents>().TouchpadPressed += PushTouchStart;
             sc_leftcontroller.GetComponent<VRTK_ControllerEvents>().TouchpadTouchEnd += PushTouchEnd;
 
             GetComponent<BoxCollider>().enabled = false;
@@ -74,9 +74,9 @@
             if (rightorleft != 0)
                 // イベントハンドラの登録
                 (rightorleft == 1 ? sc_rightcontroller : sc_leftcontroller).GetComponent<VRTK_ControllerEvents>().TouchpadAxisChanged -= PushButton;
-            sc_rightcontroller.GetComponent<VRTK_ControllerEvents>().TouchpadTouchStart -= PushTouchStart;
+            sc_rightcontroller.GetComponent<VRTK_ControllerEvents>().TouchpadPressed -= PushTouchStart;
             sc_rightcontroller.GetComponent<VRTK_ControllerEvents>().TouchpadTouchEnd -= PushTouchEnd;
-            sc_leftcontroller.GetComponent<VRTK_ControllerEvents>().TouchpadTouchStart -= PushTouchStart;
+            sc_leftcontroller.GetComponent<VRTK_ControllerEvents>().TouchpadPressed -= PushTouchStart;
             sc_leftcontroller.GetComponent<VRTK_ControllerEvents>().TouchpadTouchEnd -= PushTouchEnd;
             GetComponent<BoxCollider>().enabled = true;
             gui.SetActive(false);
@@ -141,7 +141,7 @@
         // イベントハンドラ
         private void PushTouchEnd(object sender, ControllerInteractionEventArgs e)
         {
-            if (pushtouch)
+            if (pushtouch&& ope.section != 2)
             {
                 hose.SetActive(true);
                 hose.transform.localPosition = new Vector3(0.11f, -1.25f, 0.93f);
