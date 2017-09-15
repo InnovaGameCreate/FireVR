@@ -6,7 +6,9 @@ using UnityEngine;
 public class AutoActive : MonoBehaviour
 {
     private Canvas canvas;//キャンバス
-    private SphereCollider col;//コライダー
+    [SerializeField]
+    private GameObject area;//範囲の当たり判定を持ったオブジェクト
+    public GameObject camera0;//カメラ
 
     public float active_distance = 0;//表示する距離
 
@@ -14,26 +16,26 @@ public class AutoActive : MonoBehaviour
     void Start()
     {
         canvas = GetComponent<Canvas>();
-        //当たり判定追加
-        col = gameObject.AddComponent<SphereCollider>();
-        col.radius = active_distance;
-        col.isTrigger = true;
+        canvas.enabled = false;
     }
 
     // Update is called once per frame
     void Update()
     {
         //当たり判定の大きさを更新
-        if (active_distance != col.radius)
+        if (active_distance != area.transform.localScale.x)
         {
-            col.radius = active_distance;
+            area.transform.localScale = new Vector3(active_distance, 0.1f, active_distance);
         }
+        //キャンバスをカメラの向きに
+        transform.rotation = Quaternion.Slerp(transform.rotation, Quaternion.LookRotation(new Vector3(transform.position.x - camera0.transform.position.x, 0.0f, transform.position.z - camera0.transform.position.z)), 1.0f);
     }
 
     void OnTriggerStay(Collider other)
     {
+        Debug.Log(other);
         //カメラが範囲内に入った
-        if (other.gameObject.name == "[VRTK][AUTOGEN][BodyColliderContainer]")
+        if (other.gameObject.name == "[VRTK][AUTOGEN][FootColliderContainer]")
         {
             canvas.enabled = true;
         }
@@ -42,7 +44,7 @@ public class AutoActive : MonoBehaviour
     private void OnTriggerExit(Collider other)
     {
         //カメラが範囲内から出た
-        if (other.gameObject.name == "[VRTK][AUTOGEN][BodyColliderContainer]")
+        if (other.gameObject.name == "[VRTK][AUTOGEN][FootColliderContainer]")
         {
             canvas.enabled = false;
         }

@@ -4469,7 +4469,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400096, guid: 412b92d4feeb9c548bfa98f62c4d1022, type: 2}
       propertyPath: m_RootOrder
-      value: 4
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 9500000, guid: 412b92d4feeb9c548bfa98f62c4d1022, type: 2}
       propertyPath: m_Controller
@@ -5535,7 +5535,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4937928402006904, guid: da73d20f91b87f84ea3c3e8d13ad1f68, type: 2}
       propertyPath: m_RootOrder
-      value: 5
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 114076708722911120, guid: da73d20f91b87f84ea3c3e8d13ad1f68,
         type: 2}
@@ -6526,10 +6526,10 @@ MonoBehaviour:
   allowedUseControllers: 0
   usingState: 0
   smoke: {fileID: 1885115187}
-  rightcontroller: {fileID: 0}
-  leftcontroller: {fileID: 0}
-  sc_rightcontroller: {fileID: 0}
-  sc_leftcontroller: {fileID: 0}
+  gui: {fileID: 0}
+  insidegui: {fileID: 0}
+  outsidegui: {fileID: 0}
+  guipervent: {fileID: 0}
 --- !u!95 &678740581
 Animator:
   serializedVersion: 3
@@ -6601,7 +6601,7 @@ Transform:
   - {fileID: 249959797}
   - {fileID: 552074010}
   m_Father: {fileID: 0}
-  m_RootOrder: 2
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &691555738
 GameObject:
@@ -9415,7 +9415,7 @@ Prefab:
     - target: {fileID: 224440873938245822, guid: 81ab24a1b6279e046aa3dbd6e336a830,
         type: 2}
       propertyPath: m_AnchoredPosition.x
-      value: 649
+      value: 1064
       objectReference: {fileID: 0}
     - target: {fileID: 224440873938245822, guid: 81ab24a1b6279e046aa3dbd6e336a830,
         type: 2}
@@ -10626,7 +10626,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 0
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 50, y: -30, z: 0}
 --- !u!1 &1616721441
 GameObject:
@@ -10680,10 +10680,10 @@ MonoBehaviour:
   allowedUseControllers: 0
   usingState: 0
   smoke: {fileID: 61200834}
-  rightcontroller: {fileID: 0}
-  leftcontroller: {fileID: 0}
-  sc_rightcontroller: {fileID: 0}
-  sc_leftcontroller: {fileID: 0}
+  gui: {fileID: 0}
+  insidegui: {fileID: 0}
+  outsidegui: {fileID: 0}
+  guipervent: {fileID: 0}
 --- !u!95 &1616721443
 Animator:
   serializedVersion: 3
@@ -10755,7 +10755,7 @@ Transform:
   - {fileID: 401454557}
   - {fileID: 205631491}
   m_Father: {fileID: 0}
-  m_RootOrder: 1
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1633564797
 Prefab:
