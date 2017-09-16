@@ -17,7 +17,7 @@ public class ResltChecker : MonoBehaviour {
         sc_fire[0] = GameObject.FindGameObjectsWithTag("Fire");
         sc_npc[0] = GameObject.FindGameObjectsWithTag("ScoreNPC");
         maxhp = lasthp = 100;
-        maxhp = 200;
+      
     }
     private void Update()
     {
@@ -39,7 +39,7 @@ public class ResltChecker : MonoBehaviour {
         sc_fire[1] = GameObject.FindGameObjectsWithTag("Fire");
         sc_npc[1] = GameObject.FindGameObjectsWithTag("ScoreNPC");
         firescore = (float)(sc_fire[1].Length) / (float)(sc_fire[0].Length);
-        npcscore = (float)(sc_fire[1].Length) / (float)(sc_fire[0].Length);
+        npcscore = (float)(sc_npc[1].Length) / (float)(sc_npc[0].Length);
     }
 
     //炎の消火率     返り値 0(良)～1(悪)

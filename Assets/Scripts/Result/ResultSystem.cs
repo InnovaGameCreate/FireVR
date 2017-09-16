@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class ResultSystem : MonoBehaviour {
     public GameObject star;     //星3dモデル
@@ -17,6 +18,8 @@ public class ResultSystem : MonoBehaviour {
     //NPCボーダー
     public float npcborder_bad = 0.8f;
     public float npcborder_good = 0.2f;
+
+    public Text textco;
     void makeStar(int category,float []border)
     {
         float score = 0;
@@ -60,6 +63,8 @@ public class ResultSystem : MonoBehaviour {
         makeStar(0, new float[] { 0.8f, 0.2f});
         makeStar(1, new float[] { 0.8f, 0.2f });
         makeStar(2, new float[] { 0.8f,  0.2f });
+        //%表示
+        textco.text = "<b> 体力</b> "+ ((int)((1-resultcheck.get_hpscore())*100)).ToString()+" %\n\n<b> 消火 </b> " + ((int)((1 - resultcheck.get_firescore()) * 100)).ToString() + " %\n\n<b> 避難指示etc </b> " +( (int)((1 - resultcheck.get_npcscore()) * 100)).ToString() + " %\n";
     }
          
   
