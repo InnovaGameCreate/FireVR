@@ -31,22 +31,8 @@ public class AutoActive : MonoBehaviour
         transform.rotation = Quaternion.Slerp(transform.rotation, Quaternion.LookRotation(new Vector3(transform.position.x - camera0.transform.position.x, 0.0f, transform.position.z - camera0.transform.position.z)), 1.0f);
     }
 
-    void OnTriggerStay(Collider other)
+    public void EnableCanvas(bool b)
     {
-        Debug.Log(other);
-        //カメラが範囲内に入った
-        if (other.gameObject.name == "[VRTK][AUTOGEN][FootColliderContainer]")
-        {
-            canvas.enabled = true;
-        }
-    }
-
-    private void OnTriggerExit(Collider other)
-    {
-        //カメラが範囲内から出た
-        if (other.gameObject.name == "[VRTK][AUTOGEN][FootColliderContainer]")
-        {
-            canvas.enabled = false;
-        }
+            canvas.enabled = b;
     }
 }

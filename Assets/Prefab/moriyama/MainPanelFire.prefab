@@ -41,6 +41,7 @@ GameObject:
   - component: {fileID: 33327349947881116}
   - component: {fileID: 23788692613345964}
   - component: {fileID: 64086330228073398}
+  - component: {fileID: 114436098528905910}
   m_Layer: 14
   m_Name: Cylinder
   m_TagString: Untagged
@@ -153,7 +154,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4124261996740580}
   m_Layer: 0
-  m_Name: MainPanel
+  m_Name: MainPanelFire
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -628,6 +629,18 @@ MonoBehaviour:
         m_CallState: 2
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
+--- !u!114 &114436098528905910
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1107630949820986}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c00485d0996bf0146885b59dad5c09f7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  canvas: {fileID: 1411875677579476}
 --- !u!114 &114473688129918394
 MonoBehaviour:
   m_ObjectHideFlags: 1
