@@ -54,7 +54,7 @@ public class TakeRemoveFire : MonoBehaviour
     }
     void Update()
     {
-        Debug.Log(get_nearobj());
+
         switch (state)
         {
             case Faze.WAIT:

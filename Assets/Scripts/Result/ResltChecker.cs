@@ -6,6 +6,7 @@ using UnityEngine.SceneManagement;
 public class ResltChecker : MonoBehaviour {
     private GameObject[][] sc_fire=new GameObject[2][];     //炎の数(1次：スタート時/ 2次：クリア後)
     private GameObject[][] sc_npc = new GameObject[2][];    //逃げるであろうNPCの数(1次：スタート時/ 2次：クリア後)
+    float firescore,npcscore;
     private float maxhp,lasthp;     //スタート時のHP,クリア後のHP
     private float time; //時間経過
     public int resttime =120; //シーン移動まで時間  ※デバッグ用
@@ -13,8 +14,10 @@ public class ResltChecker : MonoBehaviour {
     void Start () {
         DontDestroyOnLoad(this.gameObject);
         //スコア計測
-        Check(sc_fire[0], "Fire");
-        Check(sc_npc[0], "ScoreNPC");
+        sc_fire[0] = GameObject.FindGameObjectsWithTag("Fire");
+        sc_npc[0] = GameObject.FindGameObjectsWithTag("ScoreNPC");
+        maxhp = lasthp = 100;
+        maxhp = 200;
     }
     private void Update()
     {
@@ -33,14 +36,26 @@ public class ResltChecker : MonoBehaviour {
     public void finish()
     {
         //スコア計測
-        Check(sc_fire[1], "Fire");
-        Check(sc_npc[1], "ScoreNPC");
+        sc_fire[1] = GameObject.FindGameObjectsWithTag("Fire");
+        sc_npc[1] = GameObject.FindGameObjectsWithTag("ScoreNPC");
+        firescore = (float)(sc_fire[1].Length) / (float)(sc_fire[0].Length);
+        npcscore = (float)(sc_fire[1].Length) / (float)(sc_fire[0].Length);
     }
 
     //炎の消火率     返り値 0(良)～1(悪)
-    public float get_sc_fire()
+    public float get_firescore()
     {
-        return (float)sc_fire[1].Length / (float)sc_fire[0].Length;
+        return firescore;
+    }
+    //npcフラグ解決率     返り値 0(良)～1(悪)
+    public float get_npcscore()
+    {
+        return npcscore;
+    }
+    //hpスコア 返り値 0(良)～1(悪)
+    public float get_hpscore()
+    {
+        return (maxhp - lasthp) / maxhp;
     }
 
     //シーン上のtagnameタグが付いたオブジェクトを数える
