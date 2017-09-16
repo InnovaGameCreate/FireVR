@@ -6,9 +6,9 @@ public class Fire : MonoBehaviour {
     public int hp = 10;       //炎耐久値
     void OnParticleCollision(GameObject obj)
     {
-      
+
         //処理内容
-        //例）衝突したオブジェクトタグがenemyだった場合、オブジェクトを破壊する
+        //衝突したオブジェクトタグがSmokeだった場合、炎耐久値を減らす　0以下で消滅
         if (obj.gameObject.tag == "Smoke")
         {
             hp--;

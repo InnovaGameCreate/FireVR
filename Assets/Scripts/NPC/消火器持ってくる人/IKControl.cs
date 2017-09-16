@@ -13,7 +13,7 @@ public class IKControl : MonoBehaviour
     private Transform rightHandObj = null;  //持つべき右手の位置
     private Transform leftHandObj = null;   //持つべき左手の位置 
     private Transform removefire;   //持つべき本体
-    private bool once;
+    private bool once;  //使い捨てフラグ
 
     void Start()
     {
