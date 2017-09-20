@@ -69,6 +69,7 @@ public class TakeRemoveFire : MonoBehaviour
                     state = Faze.PRETAKE;
                     agent.SetDestination(get_nearobj().transform.position);     //消火器へ移動
                     GetComponent<Animator>().SetTrigger("Run");
+                    GetComponent<AudioSource>().Play();
                 
                 }
                 break;
@@ -95,7 +96,8 @@ public class TakeRemoveFire : MonoBehaviour
                 if (agent.remainingDistance <= agent.stoppingDistance && agent.remainingDistance != 0)
                 {
                     state = Faze.FINISH;
-                    GetComponent<Animator>().SetTrigger("Idle");        
+                    GetComponent<Animator>().SetTrigger("Idle");
+                    GetComponent<AudioSource>().Stop();
                     get_nearobj().GetComponent<Rigidbody>().constraints = RigidbodyConstraints.None;
                     GetComponent<IKControl>().ikActive = false; //ik無効
                 }

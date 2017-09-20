@@ -1,0 +1,11 @@
+﻿Licensed under the Creative Commons Attribution 4.0
+Copyright © 2015 Oculus VR, LLC. All rights reserved.
+
+The text of this may be found at: https://creativecommons.org/licenses/by/4.0/
+
+Oculus Audio Pack 1 V1.0
+https://developer.oculus.com/downloads/
+
+
+このコンテンツに含まれる　footsteps.acb　には
+Oculus Audio Pack 1 V1.0に含まれている音声データをADX2LEを用いて変換したものが含まれています。

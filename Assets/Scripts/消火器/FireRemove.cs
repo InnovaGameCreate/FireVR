@@ -19,6 +19,7 @@
         public GameObject gui;      //煙残量UI（親）
         public GameObject insidegui;   //煙残量UI 内側の残量ゲージ
         public GameObject outsidegui;  //煙残量UI 外側の使用時回転オブジェ
+        private AudioSource[] smokese;        //煙se     ループ間の途切れを目立たなくするために2つ用意
         private float smokepercent = 100;  //煙残量
         public UnityEngine.UI.Text guipervent;  //ui
 
@@ -31,6 +32,8 @@
                 issmoking = true;             
                 smoke.GetComponent<ParticleSystem>().Play();
                 StartCoroutine(SmokeRelease());       //煙放出コールチン開始
+                smokese[0].Play();          //煙効果音
+                StartCoroutine(SmokeSe());          //煙効果音
                 outsidegui.GetComponent<Animator>().SetTrigger("rot");
             }
 
@@ -48,6 +51,8 @@
             {
                 issmoking = false;
                 base.StopUsing(usingObject);
+                for (int i = 0; i < smokese.Length; i++)
+                    smokese[i].Stop();
             }
 
         }
@@ -91,6 +96,8 @@
             gui.SetActive(false);
             smoke.GetComponent<ParticleSystem>().Stop();
             outsidegui.GetComponent<Animator>().SetTrigger("stop");
+            for(int i=0;i < smokese.Length;i++)
+            smokese[i].Stop();
 
         }
         //初期化
@@ -103,6 +110,17 @@
             leftcontroller = GameObject.Find("/[VRTK_SDKManager] /SDKSetups/SteamVR/[CameraRig]/Controller (left)");
             sc_rightcontroller = GameObject.Find("/[VRTK_Scripts] /RightController");
             sc_leftcontroller = GameObject.Find("/[VRTK_Scripts] /LeftController");
+            smokese = GetComponents<AudioSource>();
+     
+        }
+
+
+        // 煙発生コルーチン  
+        IEnumerator SmokeSe()
+        {
+
+                yield return new WaitForSeconds(2);
+            smokese[1].Play();
         }
 
         // 煙発生コルーチン  
