@@ -4,11 +4,12 @@
 TagManager:
   serializedVersion: 2
   tags:
-  - target
-  - TeleportIgnore
   - Fire
+  - RemoveFire
   - Smoke
   - Wood
+  - ScoreNPC
+  - ScoreFire
   layers:
   - Default
   - TransparentFX
@@ -18,13 +19,13 @@ TagManager:
   - UI
   - 
   - 
-  - "\u6D88\u706B\u5668\u672C\u4F53"
-  - "\u6D88\u706B\u5668\u30DB\u30FC\u30B9"
-  - Stage
-  - MoveLimit
-  - Fire
-  - 
-  - 
+  - Ethan
+  - MazeWalls
+  - MazeTurret
+  - MazeTurretBullet
+  - Bg
+  - FPSWeapon
+  - ActiveArea
   - 
   - 
   - 
@@ -45,4 +46,7 @@ TagManager:
   m_SortingLayers:
   - name: Default
     uniqueID: 0
+    locked: 0
+  - name: GUI
+    uniqueID: 2379361113
     locked: 0

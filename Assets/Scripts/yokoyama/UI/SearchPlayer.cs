@@ -19,9 +19,11 @@ public class SearchPlayer : MonoBehaviour {
 
     private void OnTriggerStay(Collider coll)
     {
+        //Debug.Log(coll.gameObject.name);
         if (coll.gameObject.name == "[VRTK][AUTOGEN][BodyColliderContainer]")
         {
             FoundPlayer = true;
+            //Debug.Log("nanndedesuka");
         }
     }
 

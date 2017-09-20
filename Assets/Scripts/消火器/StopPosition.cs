@@ -4,10 +4,10 @@ using UnityEngine;
 using VRTK.Examples;
 
 public class StopPosition : MonoBehaviour {
-    private Animator anim ;
-    private OpeHose ope;
-    public Vector3 localtra;
-    public Quaternion localrad;
+    private Animator anim ;     //アニメーターコンポーネント
+    private OpeHose ope;        //ホースコンポーネント
+    public Vector3 localtra;    //解放時の初期化位置
+    public Quaternion localrad; //解放時の初期化回転
     // Use this for initialization
     void Start () {
        anim = gameObject.GetComponent<Animator>();
@@ -21,6 +21,7 @@ public class StopPosition : MonoBehaviour {
         {
             GetComponent<Animator>().enabled = true;
             Destroy(GetComponent<Rigidbody>());
+            //アニメーション再生が終了してれば解放時の初期化位置を保存
             if (anim.GetCurrentAnimatorStateInfo(0).normalizedTime > 1.0f)
             {
                 localtra = transform.localPosition;

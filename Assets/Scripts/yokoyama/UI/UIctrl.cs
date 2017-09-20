@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class UIctrl : MonoBehaviour {
     public GameObject Search;
-    public GameObject camera;
+    public GameObject mycamera;
     public GameObject Point;//UI出現ポイント
     //public float distance;
     public float MoveSpeed;
@@ -27,7 +27,7 @@ public class UIctrl : MonoBehaviour {
             _canvas.enabled = true;
 
             //カメラの方向を見る
-            this.transform.LookAt(camera.transform);
+            this.transform.LookAt(mycamera.transform);
         }
         else
         {
