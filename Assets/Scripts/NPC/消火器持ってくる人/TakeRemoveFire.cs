@@ -11,7 +11,7 @@ public class TakeRemoveFire : MonoBehaviour
     private Faze state = Faze.WAIT;    //消火器持ってくるアクション段階
     private GameObject[] tagobjs;      //マップ上すべての消火器obj
     private GameObject nearobj; //NPCから最も近い消火器
-    private bool toTakeRemoveFire = true;//消化器をもってこいと言われたフラグ
+    private bool toTakeRemoveFire = false;//消化器をもってこいと言われたフラグ
 
     //待機→消火器に向かう→消火器もってくる→終了　
     enum Faze
