@@ -7,9 +7,13 @@
     {
         public GameObject smoke; //煙オブジェクト
         private bool issmoking;         //煙出してるかどうか
+        [SerializeField]
         private GameObject rightcontroller;       //右コントローラ
+        [SerializeField]
         private GameObject leftcontroller;       //左コントローラ
+        [SerializeField]
         private GameObject sc_rightcontroller;       //スクリプト用右コントローラ
+        [SerializeField]
         private GameObject sc_leftcontroller;       //左コントローラ
         private int rightorleft;                //1なら右　２なら左コントローラ
         private OpeHose ope;            //OpeHoseコンポーネント格納
