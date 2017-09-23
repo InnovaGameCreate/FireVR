@@ -26,6 +26,7 @@
         private AudioSource[] smokese;        //煙se     ループ間の途切れを目立たなくするために2つ用意
         private float smokepercent = 100;  //煙残量
         public UnityEngine.UI.Text guipervent;  //ui
+        public bool npctaked { get; set; }     //npcが一度持って行ったものであるかどうか
 
         //使用開始　トリガーを押した
         public override void StartUsing(VRTK_InteractUse usingObject)
@@ -119,12 +120,12 @@
         }
 
 
-        // 煙発生コルーチン  
+        // 煙効果音コルーチン  
         IEnumerator SmokeSe()
         {
 
                 yield return new WaitForSeconds(2);
-            smokese[1].Play();
+                 smokese[1].Play();
         }
 
         // 煙発生コルーチン  

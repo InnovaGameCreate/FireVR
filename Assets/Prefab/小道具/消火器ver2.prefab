@@ -130,7 +130,7 @@ GameObject:
   - component: {fileID: 114650802666188232}
   m_Layer: 0
   m_Name: "\u6D88\u706B\u5668ver2"
-  m_TagString: Untagged
+  m_TagString: RemoveFire
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -426,7 +426,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1216845859693306}
   m_LocalRotation: {x: -0.7071068, y: 0, z: 0, w: 0.7071068}
-  m_LocalPosition: {x: 0, y: -1, z: -0.99}
+  m_LocalPosition: {x: 0, y: -2.12, z: -0.99}
   m_LocalScale: {x: 100, y: 99.99998, z: 99.99998}
   m_Children:
   - {fileID: 4685717294212184}
@@ -440,7 +440,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1597085022891726}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.11, y: 2.776, z: 0.93}
+  m_LocalPosition: {x: 0.11, y: 3.92, z: 0.93}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4551047954579130}
@@ -1388,7 +1388,7 @@ ConfigurableJoint:
   m_Anchor: {x: 0, y: 0, z: 0.25}
   m_Axis: {x: 0, y: 1, z: 0}
   m_AutoConfigureConnectedAnchor: 1
-  m_ConnectedAnchor: {x: 0.10999917, y: 2.7759998, z: 1.1800002}
+  m_ConnectedAnchor: {x: 0.10999917, y: 3.9199998, z: 1.1800002}
   serializedVersion: 2
   m_SecondaryAxis: {x: 0, y: -1, z: 0}
   m_XMotion: 1
