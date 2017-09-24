@@ -898,8 +898,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 129dd701482e23f4d974a9db580ad691, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  main_panel: {fileID: 1413966170121830}
   area: {fileID: 1107630949820986}
   camera0: {fileID: 0}
+  npc_controller: {fileID: 0}
   active_distance: 10
 --- !u!114 &114839403281862186
 MonoBehaviour:

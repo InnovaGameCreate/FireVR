@@ -14,9 +14,15 @@ public class NpcController : MonoBehaviour
     private bool exiting;//逃げろと言われたフラグ
     [SerializeField] private GameObject UIImage;
 
+    public bool isConfused()
+    {
+        return confused;
+    }
+
     //逃げ先へ逃げる始める
     public void setToExiting()
     {
+        confused = false;//焦っているフラグを戻す
         exiting = true; //逃げている
         ani.SetLayerWeight(1, 0);   //回転アニメーションのレイヤーウェイトを0に
         agent.SetDestination(exit.position);    //ルート決定
