@@ -13,8 +13,18 @@ public class TakeRemoveFire : MonoBehaviour
     private GameObject nearobj; //NPCから最も近い消火器
     private bool toTakeRemoveFire = false;//消化器をもってこいと言われたフラグ
 
+    public Faze getState()
+    {
+        return state;
+    }
+
+    public void setToTakeRemoveFire()
+    {
+        toTakeRemoveFire = true;
+    }
+
     //待機→消火器に向かう→消火器もってくる→終了　
-    enum Faze
+    public enum Faze
     {
         WAIT,          //待機状態
         PRETAKE,       //消火器にむかう
@@ -47,7 +57,7 @@ public class TakeRemoveFire : MonoBehaviour
 
         }
         if (mindistance != -1)
-        nearobj.GetComponent<VRTK.Examples.FireRemove>().npctaked = true;
+            nearobj.GetComponent<VRTK.Examples.FireRemove>().npctaked = true;
 
         this.nearobj = nearobj;
 
@@ -93,7 +103,7 @@ public class TakeRemoveFire : MonoBehaviour
 
                     agent.stoppingDistance = 3;     //agent.stoppingDistance =1 だとプレイヤーと近いため3に更新
                     GetComponent<IKControl>().ikActive = true;  //ik有効
-               
+
                 }
                 break;
             case Faze.TAKE:
