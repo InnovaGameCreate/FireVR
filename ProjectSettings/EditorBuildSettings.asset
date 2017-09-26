@@ -27,6 +27,9 @@ EditorBuildSettings:
     path: Assets/Scene/yokoyama.unity
     guid: eeee8928d6990cd4ba730bdfb26ecc33
   - enabled: 1
+    path: Assets/Scene/Tutorial.unity
+    guid: 03cb7845b26faff4c86d1dd322599cb1
+  - enabled: 1
     path: Assets/Scene/Result.unity
     guid: f461fc230f7b23e4f956b7aa5dee6ea8
   - enabled: 1

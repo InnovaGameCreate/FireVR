@@ -8,6 +8,7 @@ public class NpcController : MonoBehaviour
 
     private bool confused;  //焦り逃げ回っているか
     NavMeshAgent agent;     //ナビメッシュ格納
+    public float WaitingTime;
     public Transform exit;  //逃げ先
     private Animator ani;   //アニメーションコンポーネント
     
@@ -33,7 +34,9 @@ public class NpcController : MonoBehaviour
     {
         UIImage.SetActive(true);
         toReport = true;
+
         ani.SetTrigger("Idle");//通報中は動き止める
+        StartCoroutine("Waiting");
     }
 
     public void SetNonActtive()
@@ -77,5 +80,14 @@ public class NpcController : MonoBehaviour
         //逃げ先まで2ユニット未満の距離なら消える
         if (Vector3.Distance(exit.position, transform.position) < 2)
             Destroy(this.gameObject);
+    }
+
+    private IEnumerator Waiting()
+    {
+        yield return new WaitForSeconds(WaitingTime);
+        ani.SetTrigger("Confused");
+        setToExiting();
+
+        yield break;
     }
 }

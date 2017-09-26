@@ -4,7 +4,7 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 
 public class ResltChecker : MonoBehaviour {
-    private GameObject[][] sc_fire=new GameObject[2][];     //炎の数(1次：スタート時/ 2次：クリア後)
+    private GameObject[][] sc_fire=new GameObject[3][];     //炎の数(1次：スタート時/ 2次：クリア後/ 3次:現在の数)
     private GameObject[][] sc_npc = new GameObject[2][];    //逃げるであろうNPCの数(1次：スタート時/ 2次：クリア後)
     float firescore,npcscore;
     private float maxhp,lasthp;     //スタート時のHP,クリア後のHP
@@ -21,8 +21,9 @@ public class ResltChecker : MonoBehaviour {
     }
     private void Update()
     {
-      
-        if (time > resttime)
+        sc_fire[2] = GameObject.FindGameObjectsWithTag("Fire");/*正直、無駄やと思うby横山*/
+
+        if (time > resttime || sc_fire[2].Length == 0)
         {
               finish();
             time = -1;

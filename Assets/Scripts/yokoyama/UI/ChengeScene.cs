@@ -19,6 +19,7 @@ public class ChengeScene : MonoBehaviour {
 
     public void ChengeSceneFunc()
     {
-        SceneManager.LoadScene(SecneName);
+        Application.LoadLevel(SecneName);
+        //SceneManager.LoadScene(SecneName, LoadSceneMode.Additive);
     }
 }
