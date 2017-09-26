@@ -43,6 +43,9 @@ public class TurorialController : MonoBehaviour
         //消化器を持ってくるフェーズに入れば次に進む
         if (takeRemoveFire.getState() == TakeRemoveFire.Faze.TAKE)
             return true;
+        //消火器残量がなくなれば次に進む
+        if (remove_fire.GetComponent<VRTK.Examples.FireRemove>().get_smokepercent() <= 0)
+            return true;
         return false;
     }
 
@@ -94,6 +97,6 @@ public class TurorialController : MonoBehaviour
         sub.text = "";
         body.text = "これでチュートリアル終了です3秒後にゲーム開始です";
         yield return new WaitForSeconds(3.0f);
-        Application.LoadLevel("Title_yok");//LoadSceneが何故か使えないので旧形式で
+        Application.LoadLevel("NewStage");//LoadSceneが何故か使えないので旧形式で
     }
 }

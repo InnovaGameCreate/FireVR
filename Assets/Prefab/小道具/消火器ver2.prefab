@@ -378,8 +378,8 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1244395639942948}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.16187477, y: -0.016, z: -0.11189382}
-  m_LocalScale: {x: 0.06666667, y: 0.06666667, z: 0.06666667}
+  m_LocalPosition: {x: 0.16187477, y: 0.139, z: 55.48}
+  m_LocalScale: {x: 0.1, y: 0.1, z: 0.1}
   m_Children:
   - {fileID: 4413728459627316}
   - {fileID: 4739772652650186}
@@ -426,7 +426,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1216845859693306}
   m_LocalRotation: {x: -0.7071068, y: 0, z: 0, w: 0.7071068}
-  m_LocalPosition: {x: 0, y: -2.12, z: -0.99}
+  m_LocalPosition: {x: 0, y: -1.24, z: -0.99}
   m_LocalScale: {x: 100, y: 99.99998, z: 99.99998}
   m_Children:
   - {fileID: 4685717294212184}
@@ -440,7 +440,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1597085022891726}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.11, y: 3.92, z: 0.93}
+  m_LocalPosition: {x: 0.11, y: 1.3, z: 0.98}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4551047954579130}
@@ -748,7 +748,7 @@ BoxCollider:
   m_Enabled: 1
   serializedVersion: 2
   m_Size: {x: 0.4, y: 1, z: 0.41}
-  m_Center: {x: 0, y: 0.15, z: 0.31}
+  m_Center: {x: 0, y: 0, z: 0.31}
 --- !u!65 &65325648293988610
 BoxCollider:
   m_ObjectHideFlags: 1
@@ -759,7 +759,7 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 2, y: 7.37, z: 2}
+  m_Size: {x: 3, y: 7.37, z: 3}
   m_Center: {x: 0, y: 2.43, z: 0}
 --- !u!82 &82388901250062262
 AudioSource:
@@ -1158,6 +1158,10 @@ MonoBehaviour:
   allowedUseControllers: 0
   usingState: 0
   smoke: {fileID: 1141075583972866}
+  rightcontroller: {fileID: 0}
+  leftcontroller: {fileID: 0}
+  sc_rightcontroller: {fileID: 0}
+  sc_leftcontroller: {fileID: 0}
   gui: {fileID: 1346632897293258}
   insidegui: {fileID: 1647111779601784}
   outsidegui: {fileID: 1024347158644792}
@@ -1315,14 +1319,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8afa0b205791c9f4496bf2814aeac078, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  precisionGrab: 0
+  precisionGrab: 1
   rightSnapHandle: {fileID: 4413728459627316}
   leftSnapHandle: {fileID: 4413728459627316}
   throwVelocityWithAttachDistance: 0
   throwMultiplier: 1
   onGrabCollisionDelay: 0
   destroyImmediatelyOnThrow: 1
-  breakForce: 1500
+  breakForce: 1.5e+34
 --- !u!114 &114678166593316256
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1388,7 +1392,7 @@ ConfigurableJoint:
   m_Anchor: {x: 0, y: 0, z: 0.25}
   m_Axis: {x: 0, y: 1, z: 0}
   m_AutoConfigureConnectedAnchor: 1
-  m_ConnectedAnchor: {x: 0.10999917, y: 3.9199998, z: 1.1800002}
+  m_ConnectedAnchor: {x: 0.110000074, y: 0.95, z: 1.1800003}
   serializedVersion: 2
   m_SecondaryAxis: {x: 0, y: -1, z: 0}
   m_XMotion: 1

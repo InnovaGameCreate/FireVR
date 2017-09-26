@@ -178,9 +178,9 @@
             if (pushtouch && ope.section != 2)
             {
                 hose.SetActive(true);
-                hose.transform.localPosition = new Vector3(0.11f, -1.25f, 0.93f);
+                hose.transform.localPosition = new Vector3(0.11f, 3.92f, 0.93f);
                 hose.transform.localRotation = Quaternion.Euler(new Vector3(0, 0, 0));
-                hose.GetComponent<ConfigurableJoint>().connectedAnchor = new Vector3(0.1100016f, -1.25f, 1.18f);
+                hose.GetComponent<ConfigurableJoint>().connectedAnchor = new Vector3(0.1100001f, 3.92f, 1.18f);
                 pushtouch = false;
             }
         }

@@ -33,5 +33,8 @@ EditorBuildSettings:
     path: Assets/Scene/Result.unity
     guid: f461fc230f7b23e4f956b7aa5dee6ea8
   - enabled: 1
+    path: Assets/Scene/NewStage.unity
+    guid: 23230926742499945b718176b3d430f4
+  - enabled: 1
     path: Assets/Scene/Title_yok.unity
     guid: 1201952af647e204d967429bc18f8d3d
