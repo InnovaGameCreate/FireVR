@@ -655,6 +655,7 @@ GameObject:
   m_Component:
   - component: {fileID: 104706825}
   - component: {fileID: 104706824}
+  - component: {fileID: 104706826}
   m_Layer: 0
   m_Name: TutorialController
   m_TagString: Untagged
@@ -691,6 +692,86 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!82 &104706826
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 104706823}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 8300000, guid: ee6d85b850c13e644a24922b2530f5b3, type: 3}
+  m_PlayOnAwake: 0
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 2
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    - serializedVersion: 2
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 2
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 2
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 2
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
 --- !u!1 &120600944
 GameObject:
   m_ObjectHideFlags: 0
@@ -814,6 +895,11 @@ Transform:
   m_Father: {fileID: 954490110}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &200355588 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 1511997037726946, guid: 81ab24a1b6279e046aa3dbd6e336a830,
+    type: 2}
+  m_PrefabInternal: {fileID: 679138618}
 --- !u!1 &201552510
 GameObject:
   m_ObjectHideFlags: 0
@@ -2225,6 +2311,36 @@ Prefab:
       propertyPath: autoPopulateObjectReferences
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 114206650760431126, guid: 81ab24a1b6279e046aa3dbd6e336a830,
+        type: 2}
+      propertyPath: actualBoundaries
+      value: 
+      objectReference: {fileID: 2009944474}
+    - target: {fileID: 114206650760431126, guid: 81ab24a1b6279e046aa3dbd6e336a830,
+        type: 2}
+      propertyPath: actualHeadset
+      value: 
+      objectReference: {fileID: 200355588}
+    - target: {fileID: 114206650760431126, guid: 81ab24a1b6279e046aa3dbd6e336a830,
+        type: 2}
+      propertyPath: actualLeftController
+      value: 
+      objectReference: {fileID: 1152842509}
+    - target: {fileID: 114206650760431126, guid: 81ab24a1b6279e046aa3dbd6e336a830,
+        type: 2}
+      propertyPath: actualRightController
+      value: 
+      objectReference: {fileID: 1279491780}
+    - target: {fileID: 114206650760431126, guid: 81ab24a1b6279e046aa3dbd6e336a830,
+        type: 2}
+      propertyPath: modelAliasLeftController
+      value: 
+      objectReference: {fileID: 2083111049}
+    - target: {fileID: 114206650760431126, guid: 81ab24a1b6279e046aa3dbd6e336a830,
+        type: 2}
+      propertyPath: modelAliasRightController
+      value: 
+      objectReference: {fileID: 1622868882}
     m_RemovedComponents:
     - {fileID: 114651815426434608, guid: 81ab24a1b6279e046aa3dbd6e336a830, type: 2}
   m_ParentPrefab: {fileID: 100100000, guid: 81ab24a1b6279e046aa3dbd6e336a830, type: 2}
@@ -2357,6 +2473,16 @@ Prefab:
         type: 2}
       propertyPath: m_LocalPosition.z
       value: -0.021
+      objectReference: {fileID: 0}
+    - target: {fileID: 114993835991939652, guid: 83a5f1b0b6f64014fa8493f4926474e4,
+        type: 2}
+      propertyPath: m_FontData.m_FontSize
+      value: 33
+      objectReference: {fileID: 0}
+    - target: {fileID: 114993835991939652, guid: 83a5f1b0b6f64014fa8493f4926474e4,
+        type: 2}
+      propertyPath: m_Text
+      value: "\u6D88\u706B\u5668\u6301\u3063\u3066\u304D\u3066\u304F\u3060\u3055\u3044"
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 83a5f1b0b6f64014fa8493f4926474e4, type: 2}
@@ -3697,6 +3823,11 @@ Transform:
   m_PrefabParentObject: {fileID: 4557067000157098, guid: 3a373dba8ade4b6499d394229605cf50,
     type: 2}
   m_PrefabInternal: {fileID: 799287436}
+--- !u!1 &1152842509 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 1308437697712896, guid: 81ab24a1b6279e046aa3dbd6e336a830,
+    type: 2}
+  m_PrefabInternal: {fileID: 679138618}
 --- !u!1 &1155776002
 GameObject:
   m_ObjectHideFlags: 0
@@ -4385,6 +4516,11 @@ Transform:
   m_Father: {fileID: 1093161813}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1279491780 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 1601218259590744, guid: 81ab24a1b6279e046aa3dbd6e336a830,
+    type: 2}
+  m_PrefabInternal: {fileID: 679138618}
 --- !u!1001 &1283513722
 Prefab:
   m_ObjectHideFlags: 0
@@ -5473,6 +5609,11 @@ Transform:
 --- !u!1 &1622499496 stripped
 GameObject:
   m_PrefabParentObject: {fileID: 1480193398380006, guid: 81ab24a1b6279e046aa3dbd6e336a830,
+    type: 2}
+  m_PrefabInternal: {fileID: 679138618}
+--- !u!1 &1622868882 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 1231675959535932, guid: 81ab24a1b6279e046aa3dbd6e336a830,
     type: 2}
   m_PrefabInternal: {fileID: 679138618}
 --- !u!1 &1655441888
@@ -7194,6 +7335,11 @@ Transform:
   m_Father: {fileID: 992202512}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &2083111049 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 1614593882261656, guid: 81ab24a1b6279e046aa3dbd6e336a830,
+    type: 2}
+  m_PrefabInternal: {fileID: 679138618}
 --- !u!1 &2090677019
 GameObject:
   m_ObjectHideFlags: 0

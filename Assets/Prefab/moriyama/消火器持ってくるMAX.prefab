@@ -1939,7 +1939,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1671395876574308}
   m_LocalRotation: {x: -0, y: -0.3724403, z: -0, w: 0.9280562}
-  m_LocalPosition: {x: -87.54, y: 39.761955, z: 91.21}
+  m_LocalPosition: {x: -77.18, y: 39.7, z: 90.1}
   m_LocalScale: {x: 0.9, y: 0.9, z: 0.9}
   m_Children:
   - {fileID: 4022371176493390}
@@ -2649,7 +2649,7 @@ MonoBehaviour:
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_FontData:
     m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
-    m_FontSize: 25
+    m_FontSize: 33
     m_FontStyle: 0
     m_BestFit: 0
     m_MinSize: 0
@@ -2660,7 +2660,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "\u6D88\u5316\u65D7\u6301\u3063\u3066\u304D\u3066\u304F\u3060\u3055\u3044"
+  m_Text: "\u6D88\u706B\u5668\u6301\u3063\u3066\u304D\u3066\u304F\u3060\u3055\u3044"
 --- !u!114 &114225218941926364
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -3624,7 +3624,7 @@ RectTransform:
   m_GameObject: {fileID: 1926705445401584}
   m_LocalRotation: {x: -0, y: 0.8928966, z: -0, w: 0.4502619}
   m_LocalPosition: {x: 0, y: 0, z: -0.03}
-  m_LocalScale: {x: 0.0009000023, y: 0.0009, z: 0.90000236}
+  m_LocalScale: {x: 0.0015, y: 0.0015, z: 0.90000236}
   m_Children:
   - {fileID: 224218985729144696}
   m_Father: {fileID: 4905908122598816}

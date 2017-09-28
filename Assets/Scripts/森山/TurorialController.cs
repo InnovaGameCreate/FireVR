@@ -25,6 +25,9 @@ public class TurorialController : MonoBehaviour
     //消火器
     private GameObject remove_fire;
 
+    //効果音
+    private AudioSource audio_source;//AudioSource
+
     //移動
     private bool Move()
     {
@@ -65,6 +68,8 @@ public class TurorialController : MonoBehaviour
         remove_fire = GameObject.Find("/消火器ver2");
         max= GameObject.Find("/消火器持ってくるMAX");
         takeRemoveFire = max.GetComponent<TakeRemoveFire>();
+        //SE
+        audio_source = GetComponent<AudioSource>();
         //チュートリアル開始
         StartCoroutine("StateUpdate");
     }
@@ -77,6 +82,7 @@ public class TurorialController : MonoBehaviour
         body.text += "2.ポインタを移動したい方向に向けボタンを離します\n";
         body.text += "\n赤い物体に近づいてみてください\n";
         move_target = Instantiate(move_target_prefab);
+        audio_source.Play();
         yield return new WaitUntil(Move);
         //NPC
         sub.text = "NPC指示";
@@ -85,6 +91,7 @@ public class TurorialController : MonoBehaviour
         body.text += "\n消化器を持ってきてもらいましょう\n";
         max.transform.localPosition = new Vector3(0.0f, 0.3f, 0.0f);//NPC出現
         remove_fire.transform.localPosition = new Vector3(-5.0f, 0.1f, 0.0f);//消火器出現
+        audio_source.Play();
         yield return new WaitUntil(Npc);
         //消火器
         sub.text = "消火器";
@@ -92,10 +99,12 @@ public class TurorialController : MonoBehaviour
         body.text += "2.握った手で「Touchpad」を、手前から奥にスライドして安全ピンを外します\n";
         body.text += "3.もう片方の手でホース先を握り火元に向け「Trigger」ボタンで発射します\n";
         body.text += "\n火を消してみてください\n";
+        audio_source.Play();
         yield return new WaitUntil(RemoveFire);
         //次のシーンへ遷移
         sub.text = "";
         body.text = "これでチュートリアル終了です3秒後にゲーム開始です";
+        audio_source.Play();
         yield return new WaitForSeconds(3.0f);
         Application.LoadLevel("NewStage");//LoadSceneが何故か使えないので旧形式で
     }
