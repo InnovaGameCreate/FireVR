@@ -175,8 +175,11 @@
         // タッチパネルと触れなくなった  ホースをアクティブ化　configulable jointの位置等初期化
         private void PushTouchEnd(object sender, ControllerInteractionEventArgs e)
         {
-            if (pushtouch && ope.section != 2)
+            Debug.Log("pushtouch:" + pushtouch);
+            Debug.Log("ope.section:" + ope.section);
+            if (pushtouch /*&& ope.section != 2*/)//変更しましたby横山
             {
+                Debug.Log("qwe");
                 hose.SetActive(true);
                 hose.transform.localPosition = new Vector3(0.11f, 3.92f, 0.93f);
                 hose.transform.localRotation = Quaternion.Euler(new Vector3(0, 0, 0));
