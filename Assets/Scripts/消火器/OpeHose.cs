@@ -51,7 +51,7 @@
         
             base.Update();
       //ホースが抜けていないとき　ローカルy座標が一定値を超えると　ホースが抜けるアニメーション開始
-            if (transform.localPosition.y > -0.1f &&section ==0 )
+            if (transform.localPosition.y > 0.7f &&section ==0 )
             {
             
                 prehose.SetActive(false);   //つながっている部分を消す     

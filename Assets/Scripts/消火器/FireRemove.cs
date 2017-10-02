@@ -25,6 +25,8 @@
         public GameObject outsidegui;  //煙残量UI 外側の使用時回転オブジェ
         private AudioSource[] smokese;        //煙se     ループ間の途切れを目立たなくするために2つ用意
         private float smokepercent = 100;  //煙残量
+        private Vector3 inithosepos;
+        private Vector3 initjointpos;
         public UnityEngine.UI.Text guipervent;  //ui
         public bool npctaked { get; set; }     //npcが一度持って行ったものであるかどうか
 
@@ -116,7 +118,9 @@
             sc_rightcontroller = GameObject.Find("/[VRTK_Scripts] /RightController");
             sc_leftcontroller = GameObject.Find("/[VRTK_Scripts] /LeftController");
             smokese = GetComponents<AudioSource>();
-     
+            inithosepos = hose.transform.localPosition;
+            initjointpos = hose.GetComponent<ConfigurableJoint>().connectedAnchor;
+
         }
 
 
@@ -168,8 +172,11 @@
         // タッチパネルボタンを押す　　瞬間移動時にホースの configulable jointで消火器が吹っ飛ぶためホースを一時的に非アクティブ化
         private void PushTouchStart(object sender, ControllerInteractionEventArgs e)
         {
-            hose.SetActive(false);
-            pushtouch = true;
+            if (ope.section != 2)
+            {
+                hose.SetActive(false);
+                pushtouch = true;
+            }
         }
 
         // タッチパネルと触れなくなった  ホースをアクティブ化　configulable jointの位置等初期化
@@ -177,13 +184,13 @@
         {
             Debug.Log("pushtouch:" + pushtouch);
             Debug.Log("ope.section:" + ope.section);
-            if (pushtouch /*&& ope.section != 2*/)//変更しましたby横山
+            if (pushtouch && ope.section != 2)//変更しましたby横山
             {
                 Debug.Log("qwe");
                 hose.SetActive(true);
-                hose.transform.localPosition = new Vector3(0.11f, 3.92f, 0.93f);
+                hose.transform.localPosition = inithosepos;
                 hose.transform.localRotation = Quaternion.Euler(new Vector3(0, 0, 0));
-                hose.GetComponent<ConfigurableJoint>().connectedAnchor = new Vector3(0.1100001f, 3.92f, 1.18f);
+                hose.GetComponent<ConfigurableJoint>().connectedAnchor = initjointpos;
                 pushtouch = false;
             }
         }
