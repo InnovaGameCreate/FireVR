@@ -66,7 +66,8 @@ public class TurorialController : MonoBehaviour
     {
         //Inspectorで登録するとうまく動作しなかったので検索で登録
         remove_fire = GameObject.Find("/消火器ver2");
-        max= GameObject.Find("/消火器持ってくるMAX");
+        remove_fire.SetActive(false);//消火器消す
+        max = GameObject.Find("/消火器持ってくるMAX");
         takeRemoveFire = max.GetComponent<TakeRemoveFire>();
         //SE
         audio_source = GetComponent<AudioSource>();
@@ -90,7 +91,8 @@ public class TurorialController : MonoBehaviour
         body.text += "2.「Touchpad」を押してポインタを出し、NPC上部のパネルから指示します\n";
         body.text += "\n消化器を持ってきてもらいましょう\n";
         max.transform.localPosition = new Vector3(0.0f, 0.3f, 0.0f);//NPC出現
-        remove_fire.transform.localPosition = new Vector3(-5.0f, 0.1f, 0.0f);//消火器出現
+        remove_fire.SetActive(true);//消火器出現
+        max.GetComponent<TakeRemoveFire>().updateTagobjs();
         audio_source.Play();
         yield return new WaitUntil(Npc);
         //消火器

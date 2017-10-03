@@ -37,6 +37,13 @@ public class TakeRemoveFire : MonoBehaviour
         tagobjs = GameObject.FindGameObjectsWithTag("RemoveFire");
 
     }
+
+    //消化器の再検索を行う
+    public void updateTagobjs()
+    {
+        tagobjs = GameObject.FindGameObjectsWithTag("RemoveFire");
+    }
+
     //最も近い消火器を計算
     void nearRemoveFire()
     {
