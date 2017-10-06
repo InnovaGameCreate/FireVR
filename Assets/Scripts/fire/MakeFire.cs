@@ -5,11 +5,30 @@ using UnityEngine;
 //着火候補に燃えるものがあれば着火
 public class MakeFire : MonoBehaviour
 {
-    private int count;      //着火までのカウンター
+    private float count;      //着火までのカウンター
     public GameObject fire;  //炎オブジェクト
     public int firetime = 7;     //燃え移るまでの時間
     private bool check;      //燃えるものに接触してるか　　着火は一回きり 再燃焼なし
 
+    private bool touch;
+    private GameObject other;
+    private void Update()
+    {
+        if (touch&& !check)
+        {
+            //材質が木なら
+            if (other.CompareTag("Wood"))
+            {
+                count += Time.deltaTime;
+            }
+            //約firetime秒後に着火
+            if (count > firetime)
+            {
+                Instantiate(fire, transform.position, transform.rotation);
+                check = true;
+            }
+        }
+    }
     private void OnTriggerStay(Collider other)
     {
         //着火候補に既に炎があれば　着火しない
@@ -21,17 +40,8 @@ public class MakeFire : MonoBehaviour
         //着火可能
         if (!check)
         {
-            //材質が木なら
-            if (other.CompareTag("Wood"))
-            {
-                count++;
-            }
-            //約firetime秒後に着火
-            if (count > 60 * firetime)
-            {
-                Instantiate(fire, transform.position, transform.rotation);
-                check = true;
-            }
+            touch = true;
+            this.other = other.gameObject;
         }
     }
 }

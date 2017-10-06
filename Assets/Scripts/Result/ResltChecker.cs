@@ -16,6 +16,7 @@ public class ResltChecker : MonoBehaviour
     public GameObject clearparticle;       //クリア時のパーティクル
     public Transform player;       //プレイヤー
     public GameObject clearui; //クリアUI
+    public GameObject timeupui; //クリアUI
     private AudioSource[] se = new AudioSource[2]; //se
     // Use this for initialization
     void Start()
@@ -103,19 +104,20 @@ public class ResltChecker : MonoBehaviour
     {
         yield return new WaitForSeconds(1);
         GameObject ui;
-        ui = Instantiate(clearui, player.position + player.forward * 2, player.rotation);
-        ui.transform.parent = player;
+  
 
         if (time > resttime)
         {
-            ui.transform.FindChild("Text").gameObject.GetComponent<Text>().text = "時間切れ";
+            ui = Instantiate(timeupui, player.position + player.forward * 2, player.rotation);
+            ui.transform.parent = player;
             se[1].Play();
         }
         else
         {
             se[1].Play();
 
-            ui.transform.FindChild("Text").gameObject.GetComponent<Text>().text = "消化完了";
+            ui = Instantiate(clearui, player.position + player.forward * 2, player.rotation);
+            ui.transform.parent = player;
             GameObject[] particle = new GameObject[8];
 
             Vector3[] particlepos = new Vector3[8];

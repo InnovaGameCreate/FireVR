@@ -6526,6 +6526,10 @@ MonoBehaviour:
   allowedUseControllers: 0
   usingState: 0
   smoke: {fileID: 1885115187}
+  rightcontroller: {fileID: 0}
+  leftcontroller: {fileID: 0}
+  sc_rightcontroller: {fileID: 0}
+  sc_leftcontroller: {fileID: 0}
   gui: {fileID: 0}
   insidegui: {fileID: 0}
   outsidegui: {fileID: 0}
@@ -9120,7 +9124,7 @@ Prefab:
     - target: {fileID: 224648707940075020, guid: 81ab24a1b6279e046aa3dbd6e336a830,
         type: 2}
       propertyPath: m_AnchoredPosition.y
-      value: -11
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 224648707940075020, guid: 81ab24a1b6279e046aa3dbd6e336a830,
         type: 2}
@@ -9130,7 +9134,7 @@ Prefab:
     - target: {fileID: 224648707940075020, guid: 81ab24a1b6279e046aa3dbd6e336a830,
         type: 2}
       propertyPath: m_SizeDelta.y
-      value: 16
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 224922313228020026, guid: 81ab24a1b6279e046aa3dbd6e336a830,
         type: 2}
@@ -9150,7 +9154,7 @@ Prefab:
     - target: {fileID: 224922313228020026, guid: 81ab24a1b6279e046aa3dbd6e336a830,
         type: 2}
       propertyPath: m_AnchoredPosition.y
-      value: -11
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 224922313228020026, guid: 81ab24a1b6279e046aa3dbd6e336a830,
         type: 2}
@@ -9160,7 +9164,7 @@ Prefab:
     - target: {fileID: 224922313228020026, guid: 81ab24a1b6279e046aa3dbd6e336a830,
         type: 2}
       propertyPath: m_SizeDelta.y
-      value: 16
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 224954916482888386, guid: 81ab24a1b6279e046aa3dbd6e336a830,
         type: 2}
@@ -9180,7 +9184,7 @@ Prefab:
     - target: {fileID: 224954916482888386, guid: 81ab24a1b6279e046aa3dbd6e336a830,
         type: 2}
       propertyPath: m_AnchoredPosition.y
-      value: -11
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 224954916482888386, guid: 81ab24a1b6279e046aa3dbd6e336a830,
         type: 2}
@@ -9190,7 +9194,7 @@ Prefab:
     - target: {fileID: 224954916482888386, guid: 81ab24a1b6279e046aa3dbd6e336a830,
         type: 2}
       propertyPath: m_SizeDelta.y
-      value: 16
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 224986408978389370, guid: 81ab24a1b6279e046aa3dbd6e336a830,
         type: 2}
@@ -9210,7 +9214,7 @@ Prefab:
     - target: {fileID: 224986408978389370, guid: 81ab24a1b6279e046aa3dbd6e336a830,
         type: 2}
       propertyPath: m_AnchoredPosition.y
-      value: -8
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 224986408978389370, guid: 81ab24a1b6279e046aa3dbd6e336a830,
         type: 2}
@@ -9220,7 +9224,7 @@ Prefab:
     - target: {fileID: 224986408978389370, guid: 81ab24a1b6279e046aa3dbd6e336a830,
         type: 2}
       propertyPath: m_SizeDelta.y
-      value: 16
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 224716886083672534, guid: 81ab24a1b6279e046aa3dbd6e336a830,
         type: 2}
@@ -9240,7 +9244,7 @@ Prefab:
     - target: {fileID: 224716886083672534, guid: 81ab24a1b6279e046aa3dbd6e336a830,
         type: 2}
       propertyPath: m_AnchoredPosition.y
-      value: -30
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 224716886083672534, guid: 81ab24a1b6279e046aa3dbd6e336a830,
         type: 2}
@@ -9250,7 +9254,7 @@ Prefab:
     - target: {fileID: 224716886083672534, guid: 81ab24a1b6279e046aa3dbd6e336a830,
         type: 2}
       propertyPath: m_SizeDelta.y
-      value: 22
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 224751211138315656, guid: 81ab24a1b6279e046aa3dbd6e336a830,
         type: 2}
@@ -9270,7 +9274,7 @@ Prefab:
     - target: {fileID: 224751211138315656, guid: 81ab24a1b6279e046aa3dbd6e336a830,
         type: 2}
       propertyPath: m_AnchoredPosition.y
-      value: -8
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 224751211138315656, guid: 81ab24a1b6279e046aa3dbd6e336a830,
         type: 2}
@@ -9280,7 +9284,7 @@ Prefab:
     - target: {fileID: 224751211138315656, guid: 81ab24a1b6279e046aa3dbd6e336a830,
         type: 2}
       propertyPath: m_SizeDelta.y
-      value: 16
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 224348377431305862, guid: 81ab24a1b6279e046aa3dbd6e336a830,
         type: 2}
@@ -9300,7 +9304,7 @@ Prefab:
     - target: {fileID: 224348377431305862, guid: 81ab24a1b6279e046aa3dbd6e336a830,
         type: 2}
       propertyPath: m_AnchoredPosition.y
-      value: -30
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 224348377431305862, guid: 81ab24a1b6279e046aa3dbd6e336a830,
         type: 2}
@@ -9310,7 +9314,7 @@ Prefab:
     - target: {fileID: 224348377431305862, guid: 81ab24a1b6279e046aa3dbd6e336a830,
         type: 2}
       propertyPath: m_SizeDelta.y
-      value: 22
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 224423552256549182, guid: 81ab24a1b6279e046aa3dbd6e336a830,
         type: 2}
@@ -9330,7 +9334,7 @@ Prefab:
     - target: {fileID: 224423552256549182, guid: 81ab24a1b6279e046aa3dbd6e336a830,
         type: 2}
       propertyPath: m_AnchoredPosition.y
-      value: -55
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 224423552256549182, guid: 81ab24a1b6279e046aa3dbd6e336a830,
         type: 2}
@@ -9340,7 +9344,7 @@ Prefab:
     - target: {fileID: 224423552256549182, guid: 81ab24a1b6279e046aa3dbd6e336a830,
         type: 2}
       propertyPath: m_SizeDelta.y
-      value: 22
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 224714521131444868, guid: 81ab24a1b6279e046aa3dbd6e336a830,
         type: 2}
@@ -9360,7 +9364,7 @@ Prefab:
     - target: {fileID: 224714521131444868, guid: 81ab24a1b6279e046aa3dbd6e336a830,
         type: 2}
       propertyPath: m_AnchoredPosition.y
-      value: -25.5
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 224714521131444868, guid: 81ab24a1b6279e046aa3dbd6e336a830,
         type: 2}
@@ -9370,7 +9374,7 @@ Prefab:
     - target: {fileID: 224714521131444868, guid: 81ab24a1b6279e046aa3dbd6e336a830,
         type: 2}
       propertyPath: m_SizeDelta.y
-      value: 41
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 224002545319890264, guid: 81ab24a1b6279e046aa3dbd6e336a830,
         type: 2}
@@ -9390,7 +9394,7 @@ Prefab:
     - target: {fileID: 224002545319890264, guid: 81ab24a1b6279e046aa3dbd6e336a830,
         type: 2}
       propertyPath: m_AnchoredPosition.y
-      value: -82
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 224002545319890264, guid: 81ab24a1b6279e046aa3dbd6e336a830,
         type: 2}
@@ -9400,7 +9404,7 @@ Prefab:
     - target: {fileID: 224002545319890264, guid: 81ab24a1b6279e046aa3dbd6e336a830,
         type: 2}
       propertyPath: m_SizeDelta.y
-      value: 66
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 224440873938245822, guid: 81ab24a1b6279e046aa3dbd6e336a830,
         type: 2}
@@ -9420,7 +9424,7 @@ Prefab:
     - target: {fileID: 224440873938245822, guid: 81ab24a1b6279e046aa3dbd6e336a830,
         type: 2}
       propertyPath: m_AnchoredPosition.y
-      value: -70
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 224440873938245822, guid: 81ab24a1b6279e046aa3dbd6e336a830,
         type: 2}
@@ -9430,7 +9434,7 @@ Prefab:
     - target: {fileID: 224440873938245822, guid: 81ab24a1b6279e046aa3dbd6e336a830,
         type: 2}
       propertyPath: m_SizeDelta.y
-      value: 120
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1445156852498464, guid: 81ab24a1b6279e046aa3dbd6e336a830, type: 2}
       propertyPath: m_IsActive
@@ -9984,7 +9988,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f2d4190037524a04c9c8b8b43b5c3b9c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  WaitingTime: 0
   exit: {fileID: 463167612}
+  UIImage: {fileID: 0}
 --- !u!195 &1524051777
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -10680,6 +10686,10 @@ MonoBehaviour:
   allowedUseControllers: 0
   usingState: 0
   smoke: {fileID: 61200834}
+  rightcontroller: {fileID: 0}
+  leftcontroller: {fileID: 0}
+  sc_rightcontroller: {fileID: 0}
+  sc_leftcontroller: {fileID: 0}
   gui: {fileID: 0}
   insidegui: {fileID: 0}
   outsidegui: {fileID: 0}
