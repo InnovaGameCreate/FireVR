@@ -39,6 +39,7 @@ public class FireSound : MonoBehaviour
                 fire.Remove(fire[i]);
             }
         }
+        Debug.Log(num);
         //子の炎がすべて消えたときに音を消す
         if (num == 0)
         {

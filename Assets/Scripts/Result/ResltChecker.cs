@@ -35,9 +35,18 @@ public class ResltChecker : MonoBehaviour
         {
             return;
         }
-        sc_fire[2] = GameObject.FindGameObjectsWithTag("Fire");/*正直、無駄やと思うby横山*/
+        bool flag = false;
+        foreach (GameObject fire in sc_fire[0])
+        {
+            if (fire != null)
+            {
+                flag = true;
+                break;
+            }
+        }
 
-        if (time > resttime || sc_fire[2].Length == 0)
+        //sc_fire[2] = GameObject.FindGameObjectsWithTag("Fire");/*正直、無駄やと思うby横山*/
+        if (time > resttime || !flag)
         {
             StartCoroutine(Clear());
             finish();
@@ -104,7 +113,8 @@ public class ResltChecker : MonoBehaviour
         }
         else
         {
-            se[0].Play();
+            se[1].Play();
+
             ui.transform.FindChild("Text").gameObject.GetComponent<Text>().text = "消化完了";
             GameObject[] particle = new GameObject[8];
 
@@ -139,5 +149,6 @@ public class ResltChecker : MonoBehaviour
         }
         yield return new WaitForSeconds(5f);
         Application.LoadLevel("Result");        //リザルトシーンへ
+        se[0].Play();
     }
 }

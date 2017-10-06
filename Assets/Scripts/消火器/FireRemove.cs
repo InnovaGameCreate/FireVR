@@ -29,6 +29,7 @@
         private Vector3 initjointpos;
         public UnityEngine.UI.Text guipervent;  //ui
         public bool npctaked { get; set; }     //npcが一度持って行ったものであるかどうか
+        private bool ungrab;
 
         //使用開始　トリガーを押した
         public override void StartUsing(VRTK_InteractUse usingObject)
@@ -60,6 +61,7 @@
                 base.StopUsing(usingObject);
                 for (int i = 0; i < smokese.Length; i++)
                     smokese[i].Stop();
+                ungrab = true;
             }
 
         }
@@ -105,6 +107,7 @@
             outsidegui.GetComponent<Animator>().SetTrigger("stop");
             for(int i=0;i < smokese.Length;i++)
             smokese[i].Stop();
+            ungrab = true;
 
         }
         //初期化
@@ -127,8 +130,9 @@
         // 煙効果音コルーチン  
         IEnumerator SmokeSe()
         {
-
+            ungrab = false;
                 yield return new WaitForSeconds(2);
+            if(!ungrab)
                  smokese[1].Play();
         }
 

@@ -110,6 +110,7 @@ public class TakeRemoveFire : MonoBehaviour
 
                     agent.stoppingDistance = 3;     //agent.stoppingDistance =1 だとプレイヤーと近いため3に更新
                     GetComponent<IKControl>().ikActive = true;  //ik有効
+                    StartCoroutine(findplayer());
 
                 }
                 break;
@@ -152,6 +153,14 @@ public class TakeRemoveFire : MonoBehaviour
         agent.SetDestination(exit.position);       //出口へ移動
         GetComponent<Animator>().SetTrigger("Run");
         GetComponent<AudioSource>().Play();
+    }
+    IEnumerator findplayer()
+    {
+        while (state == Faze.TAKE) {
+            yield return new WaitForSeconds(1);
+
+                agent.SetDestination(player.position);       //プレイヤーへ移動
+        }
     }
 
 }

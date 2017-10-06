@@ -26,15 +26,15 @@ EditorBuildSettings:
   - enabled: 0
     path: Assets/Scene/yokoyama.unity
     guid: eeee8928d6990cd4ba730bdfb26ecc33
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scene/Tutorial.unity
     guid: 03cb7845b26faff4c86d1dd322599cb1
   - enabled: 1
     path: Assets/Scene/NewStage.unity
     guid: 23230926742499945b718176b3d430f4
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scene/Result.unity
     guid: f461fc230f7b23e4f956b7aa5dee6ea8
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scene/Title_yok.unity
     guid: 1201952af647e204d967429bc18f8d3d
