@@ -108,6 +108,6 @@ public class TurorialController : MonoBehaviour
         body.text = "これでチュートリアル終了です3秒後にゲーム開始です";
         audio_source.Play();
         yield return new WaitForSeconds(3.0f);
-        Application.LoadLevel("NewStage");//LoadSceneが何故か使えないので旧形式で
+        Application.LoadLevel("maincamera");//LoadSceneが何故か使えないので旧形式で
     }
 }
