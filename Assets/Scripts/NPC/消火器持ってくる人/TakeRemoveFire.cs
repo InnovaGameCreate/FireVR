@@ -122,7 +122,7 @@ public class TakeRemoveFire : MonoBehaviour
                     state = Faze.FINISH;
                     GetComponent<Animator>().SetTrigger("Idle");
                     GetComponent<AudioSource>().Stop();
-                    get_nearobj().GetComponent<Rigidbody>().constraints = RigidbodyConstraints.None;
+                    get_nearobj().GetComponent<Rigidbody>().constraints = RigidbodyConstraints.FreezePositionX | RigidbodyConstraints.FreezePositionZ;
                     GetComponent<IKControl>().ikActive = false; //ik無効
 
                     StartCoroutine("GoExit");       //数秒待機して逃げるコールチン開始
@@ -147,7 +147,7 @@ public class TakeRemoveFire : MonoBehaviour
     {
         yield return new WaitForSeconds(0.5f);
         get_nearobj().transform.parent = null;      //消火器との子の関係を解除
-
+        get_nearobj().GetComponent<Rigidbody>().constraints = RigidbodyConstraints.None;
         yield return new WaitForSeconds(2);
         agent.stoppingDistance = 1;
         agent.SetDestination(exit.position);       //出口へ移動
