@@ -79,16 +79,16 @@ public class TurorialController : MonoBehaviour
     {
         //移動
         sub.text = "移動";
-        body.text = "1.「Touchpad」を押してポインタを出します\n";
+        body.text = "1.「タッチパッド」を押してポインタを出します\n";
         body.text += "2.ポインタを移動したい方向に向けボタンを離します\n";
         body.text += "\n赤い物体に近づいてみてください\n";
         move_target = Instantiate(move_target_prefab);
         audio_source.Play();
         yield return new WaitUntil(Move);
         //NPC
-        sub.text = "NPC指示";
-        body.text = "1.NPCに近づいてください\n";
-        body.text += "2.「Touchpad」を押してポインタを出し、NPC上部のパネルから指示します\n";
+        sub.text = "指示";
+        body.text = "1.おじさんに近づいてください\n";
+        body.text += "2.「Touchpad」を押してポインタを出し、おじさん上部のパネルから指示します\n";
         body.text += "\n消化器を持ってきてもらいましょう\n";
         max.transform.localPosition = new Vector3(0.0f, 0.3f, 0.0f);//NPC出現
         remove_fire.SetActive(true);//消火器出現
@@ -97,9 +97,9 @@ public class TurorialController : MonoBehaviour
         yield return new WaitUntil(Npc);
         //消火器
         sub.text = "消火器";
-        body.text = "1.手を消化器に近づけ「Grip」ボタンで握ってください\n";
-        body.text += "2.握った手で「Touchpad」を、手前から奥にスライドして安全ピンを外します\n";
-        body.text += "3.もう片方の手でホース先を握り火元に向け「Trigger」ボタンで発射します\n";
+        body.text = "1.手を消化器に近づけ「グリップ」ボタンで握ってください\n";
+        body.text += "2.握った手で「パッド」を、手前から奥にスライドして安全ピンを外します\n";
+        body.text += "3.もう片方の手でホース先を握り火元に向け「トリガー」ボタンで発射します\n";
         body.text += "\n火を消してみてください\n";
         audio_source.Play();
         yield return new WaitUntil(RemoveFire);
