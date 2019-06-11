@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
+using System.Linq;
 
 public class TurorialController : MonoBehaviour
 {
@@ -24,6 +25,9 @@ public class TurorialController : MonoBehaviour
     private TakeRemoveFire takeRemoveFire;
     //消火器
     private GameObject remove_fire;
+    // 炎
+    [SerializeField] private GameObject fireObject;
+    [SerializeField] private List<GameObject> fireObjects = new List<GameObject>();
 
     //効果音
     private AudioSource audio_source;//AudioSource
@@ -64,6 +68,27 @@ public class TurorialController : MonoBehaviour
     // Use this for initialization
     void Start()
     {
+
+        fireObjects = fireObject.GetComponentsInChildren<Transform>().Where(x => x.gameObject.CompareTag("Fire")).Select(x =>
+        {
+
+            if (x.gameObject.CompareTag("Fire"))
+                return x.gameObject;
+            else
+                return null;
+
+
+        }).ToList();
+
+        foreach(Transform child in fireObject.transform)
+        {
+            fireObjects.Add(child.gameObject);
+
+            if (child.CompareTag("Fire"))
+            {
+                fireObjects.Add(child.gameObject);
+            }
+        }
         //Inspectorで登録するとうまく動作しなかったので検索で登録
         remove_fire = GameObject.Find("/消火器ver2");
         remove_fire.SetActive(false);//消火器消す
@@ -88,7 +113,8 @@ public class TurorialController : MonoBehaviour
         //NPC
         sub.text = "指示";
         body.text = "1.おじさんに近づいてください\n";
-        body.text += "2.「Touchpad」を押してポインタを出し、おじさん上部のパネルから指示します\n";
+        body.text += "2.「タッチパッド」を押してポインタを出し、\nおじさん上部のパネルから指示します\n";
+        body.text += "パネルにポインタを合わせて「トリガー」を引くと指示ができます。";
         body.text += "\n消化器を持ってきてもらいましょう\n";
         max.transform.localPosition = new Vector3(0.0f, 0.3f, 0.0f);//NPC出現
         remove_fire.SetActive(true);//消火器出現
@@ -99,7 +125,7 @@ public class TurorialController : MonoBehaviour
         sub.text = "消火器";
         body.text = "1.手を消化器に近づけ「グリップ」ボタンで握ってください\n";
         body.text += "2.握った手で「パッド」を、手前から奥にスライドして安全ピンを外します\n";
-        body.text += "3.もう片方の手でホース先を握り火元に向け「トリガー」ボタンで発射します\n";
+        body.text += "3.もう片方の手でホース先を握り火元に向け「トリガー」を引いて発射します\n";
         body.text += "\n火を消してみてください\n";
         audio_source.Play();
         yield return new WaitUntil(RemoveFire);

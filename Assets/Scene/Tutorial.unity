@@ -743,6 +743,7 @@ MonoBehaviour:
   eye: {fileID: 297644751}
   move_target_prefab: {fileID: 1458659214701010, guid: 523599329447536458d9cbfe485d61b5,
     type: 2}
+  fireObject: {fileID: 1324921177}
 --- !u!4 &104706825
 Transform:
   m_ObjectHideFlags: 0
@@ -6100,6 +6101,28 @@ Prefab:
         type: 2}
       propertyPath: controllerAttachPoint
       value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 114027980682506428, guid: ebd9d51ee4fe0a9448643f11d07181b1,
+        type: 2}
+      propertyPath: customCursor
+      value: 
+      objectReference: {fileID: 1409016396311016, guid: f4a46b4a1a6297244a0ebc307592844c,
+        type: 2}
+    - target: {fileID: 114027980682506428, guid: ebd9d51ee4fe0a9448643f11d07181b1,
+        type: 2}
+      propertyPath: cursorScaleMultiplier
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 114270364055531536, guid: ebd9d51ee4fe0a9448643f11d07181b1,
+        type: 2}
+      propertyPath: customCursor
+      value: 
+      objectReference: {fileID: 1409016396311016, guid: f4a46b4a1a6297244a0ebc307592844c,
+        type: 2}
+    - target: {fileID: 114270364055531536, guid: ebd9d51ee4fe0a9448643f11d07181b1,
+        type: 2}
+      propertyPath: cursorScaleMultiplier
+      value: 20
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: ebd9d51ee4fe0a9448643f11d07181b1, type: 2}
